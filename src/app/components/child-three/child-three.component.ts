@@ -15,8 +15,8 @@ export class ChildThreeComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.getDataObs().subscribe(value => {
-      this.dataFromParent = value
-      this.evaluateType()
+      this.dataFromParent = value;
+      this.evaluateType();
     })    
   }
   evaluateType() {

@@ -6,7 +6,7 @@ import { DataServiceService } from '../../services/data-service.service'
   templateUrl: './parent.component.html',
   styleUrls: ['./parent.component.scss']
 })
-export class ParentComponent implements OnInit, OnChanges {
+export class ParentComponent implements OnInit {
 
   data:string = '';
 
@@ -15,12 +15,9 @@ export class ParentComponent implements OnInit, OnChanges {
   ngOnInit() {
   }
 
-  ngOnChanges() {
-    console.log(this.data)
-  }
-
   clearButton() {
     this.dataService.getData(null);
+    this.data = '';
   }
 
   updateData() {

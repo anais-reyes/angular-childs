@@ -5,13 +5,14 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataServiceService {
+
   public data: string;
   public dataHandler = new Subject();
 
   constructor() { }
 
   getData(value) {
-    this.dataHandler.next(value)
+    this.dataHandler.next(value);
   }
 
   getDataObs() {

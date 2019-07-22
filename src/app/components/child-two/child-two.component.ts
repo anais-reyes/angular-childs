@@ -11,13 +11,12 @@ export class ChildTwoComponent implements OnInit {
   dataFromParent;
   stringInBrowser:any = 'this will show double the number if the value is a number'
 
-
   constructor(private dataService : DataServiceService) { }
 
   ngOnInit() {
     this.dataService.getDataObs().subscribe(value => {
-      this.dataFromParent = value
-      this.evaluateType()
+      this.dataFromParent = value;
+      this.evaluateType();
     })
       
   }

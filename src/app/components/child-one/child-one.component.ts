@@ -8,7 +8,6 @@ import { DataServiceService } from '../../services/data-service.service';
   styleUrls: ['./child-one.component.scss']
 })
 export class ChildOneComponent implements OnInit {
-  @Input() data;
   dataFromParent;
   stringInBrowser:any = 'this will show double the number if the value is a number'
 
@@ -16,7 +15,7 @@ export class ChildOneComponent implements OnInit {
 
   ngOnInit() {
     this.dataService.getDataObs().subscribe(value => {
-      this.dataFromParent = value
+      this.dataFromParent = value;
       this.evaluateType();
     })
     
